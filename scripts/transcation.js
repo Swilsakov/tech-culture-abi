@@ -4,7 +4,7 @@ const { ethers } = require("ethers");
 const provider = new ethers.providers.JsonRpcProvider("https://data-seed-prebsc-1-s3.binance.org:8545");
 
 const address = "0x904aD03E7006a62d355EAE6FBD6Da4066636301A";
-const privateKey = "";
+const privateKey = process.env.PRIVATE_KEY;
 
 const wallet = new ethers.Wallet(privateKey, provider);
 const ABI = [
